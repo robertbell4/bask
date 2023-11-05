@@ -1,6 +1,6 @@
 
 # manual windows command line input : 
-# g++ -o game main.cpp
+# g++ -o game main.cpp display.cpp controls.cpp
 # ./game.exe
 
 # Define the C++ compiler

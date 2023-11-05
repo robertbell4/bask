@@ -1,58 +1,48 @@
 
-
+// including libraries
 #include <iostream>
+#include <string>
 
-void initializeGame();
-void refreshVis();
-
-
+//including self created header files
+//no need to include .h files when compiling if included here
+#include "display.hpp" //alows me to call functions from display.hpp 
+#include "tile.hpp"
+#include "map.hpp"
+#include "controls.hpp"
+#include "lizard.hpp"
 
 void initializeGame(){
-
-
+    welcome();
 }
-
-
-
-void refreshVis(){
-
-    for ( int i = 0; i < 10; i++){
-        if (  (i == 0) || (i== 9)  )
-        {
-            std::cout << "*********************************\n";
-        }
-        
-        else{
-            std::cout << "*                               *\n";
-        }
-    }
-    
-    
-}
-
-
 
 
 int main(){
 
-    //initializeGame();
+    initializeGame();
+    Map mymap;
+    //std::cin >> name; //input
 
+    mymap.printMap();
+    Tile player_tile("     "," ^^@"," ++ ");
+    Lizard player(&player_tile);
 
-    int run = 1;
+    int run = 18;
+    int x = 0;
+    char input = 0;
     while(run){
 
-        //timing
+        mymap.tiles[3][x] = *(player.getTile());
 
+
+        input = checkInput();
         //gaming
 
         //display
-        refreshVis();
+        mymap.printMap();
+        x++;
         run--;
         
        }
-
-    std::cout << "              ^ ^ ^@  \n";
-    std::cout << "              ++  ++  \n";
 
     return 0;
 }
