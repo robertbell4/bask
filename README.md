@@ -11,3 +11,16 @@ Display:
 
 The display will be made up of amap of 3x5 sized tiles. The top row, leftmost column and rightmost column will contain whitespace.
 
+
+TODO:
+
+Fix .hpp and .cpp for c++ standards
+
+Erase Trailing lizard Tile
+
+Touch Detection
+
+options for interaction
+
+sunning rock
+
